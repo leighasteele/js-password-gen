@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword () {
+function writePassword () {
 var lower = 'abcdefghijklmnop'
 var number = '0123456789'
 var special = '"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
@@ -14,20 +14,25 @@ var hasNumber = confirm('Has number?');
 var hasSpecial = confirm('Has special character?');
 
 if (hasLower) {
-  possible += lower;
+  confirm += lower;
 }
 if (hasNumber) {
-possible += number;
+confirm += number;
 }
 
 if (hasSpecial) {
-  possible += special;
+  confirm += special;
   }
 
   for (var i = 0; i <= characters; i++) {
     var random = Math.floor(Math.random() * number.length, special.length, lower.length);
   password += number, special, lower (random +1);
-  }
+
+    debugger;
+
+    return '';
+
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -40,3 +45,7 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+function writePassword() {
+  document.querySelector("#generate").innerHTML = "Generate Password";
+}
