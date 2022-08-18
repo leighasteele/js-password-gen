@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+//Possible Outcomes
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var symbols = ['"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~'];
 var lower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -20,7 +21,7 @@ var init = function() {
     init();
   }
 }
-
+//Prompts
 var hasLower = confirm('Has lowercase letter?');
 var hasNumber = confirm('Has number?');
 var hasSpecial = confirm('Has special character?');
