@@ -5,11 +5,9 @@ function generatePassword () {
 var lower = 'abcdefghijklmnop'
 var number = '0123456789'
 var special = '"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
-var possible = '';
 var password = '';
-}
-
 var characters = 8;
+}
 
 var hasLower = confirm('Has lowercase letter?');
 var hasNumber = confirm('Has number?');
@@ -26,10 +24,10 @@ if (hasSpecial) {
   possible += special;
   }
 
-  for (var i = 0; i < characters; i++) {
+  for (var i = 0; i <= characters; i++) {
+    var random = Math.floor(Math.random() * number.length, special.length, lower.length);
+  password += number, special, lower (random +1);
   }
-
-  return '';
 
 // Write password to the #password input
 function writePassword() {
