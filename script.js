@@ -1,13 +1,14 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function writePassword () {
-var lower = 'abcdefghijklmnop'
-var number = '0123456789'
-var special = '"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
+var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var symbols = ['"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~'];
+var lower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var possible = '';
 var password = '';
-var characters = 8;
-}
+var characters = 8
+
+function generatePassword () {
 
 var init = function() {
   var input = prompt('How many characters?');
@@ -24,14 +25,29 @@ var hasLower = confirm('Has lowercase letter?');
 var hasNumber = confirm('Has number?');
 var hasSpecial = confirm('Has special character?');
 
-if (choice) {
+if (confirm) {
   for (var i = 0; i <= characters; i++) {
-    var random = Math.floor(Math.random() * number.length, special.length, lower.length);
-  password += number, special, lower (random +1);
+    var random = Math.floor(Math.random() * numbers.length, symbols.length, lower.length);
+  password += numbers, symbols, lower;
 
-    debugger;
+  var possibleCharacters = [];
 
+  if (numbersprompt === true) { 
+    possibleCharacters = possibleCharacters.concat(numbers)
+  }
+  if(symbolprompt === true) {
+     possibleCharacters = possibleCharacters.concat(symbols)
+   }
+  if(uppercaseprompt === true) {
+    possibleCharacters = possibleCharacters.concat(uppercase)
+  }
+  if(lowercaseprompt === true) {
+    possibleCharacters = possibleCharacters.concat(lowercase)
+  }
 }
+}
+
+return init;
 }
 // Write password to the #password input
 function writePassword() {
@@ -44,7 +60,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-function writePassword() {
-  document.querySelector("#generate").innerHTML = "Generate Password";
-}
