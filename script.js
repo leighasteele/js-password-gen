@@ -9,31 +9,30 @@ var password = '';
 var characters = 8;
 }
 
+var init = function() {
+  var input = prompt('How many characters?');
+  var choice;
+  if (input) {
+    choice = input[0];
+  } else {
+    alert('Please enter how many characters.');
+    init();
+  }
+}
+
 var hasLower = confirm('Has lowercase letter?');
 var hasNumber = confirm('Has number?');
 var hasSpecial = confirm('Has special character?');
 
-if (hasLower) {
-  confirm += lower;
-}
-if (hasNumber) {
-confirm += number;
-}
-
-if (hasSpecial) {
-  confirm += special;
-  }
-
+if (choice) {
   for (var i = 0; i <= characters; i++) {
     var random = Math.floor(Math.random() * number.length, special.length, lower.length);
   password += number, special, lower (random +1);
 
     debugger;
 
-    return '';
-
 }
-
+}
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
