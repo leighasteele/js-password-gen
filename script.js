@@ -9,6 +9,28 @@ var possible = '';
 var password = '';
 }
 
+var characters = 8;
+
+var hasLower = confirm('Has lowercase letter?');
+var hasNumber = confirm('Has number?');
+var hasSpecial = confirm('Has special character?');
+
+if (hasLower) {
+  possible += lower;
+}
+if (hasNumber) {
+possible += number;
+}
+
+if (hasSpecial) {
+  possible += special;
+  }
+
+  for (var i = 0; i < characters; i++) {
+  }
+
+  return '';
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
