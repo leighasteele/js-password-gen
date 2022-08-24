@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 var numbers = '0123456789';
 var symbols = '"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'; 
 var lower = 'abcdefghijklmonpqrstuvwxyz';
-var upper = lower.toUpperCase();
+var upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var possible = '';
 var password = '';
 
