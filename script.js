@@ -42,12 +42,12 @@ function generatePassword() {
       }
     }
   }
-
+//builds password by randomly selecting string character
 for (var i = 0; i < characters; i++) {
   var random = Math.floor(Math.random() * possible.length);
   password += possible[random];
 }
-
+//shows the actual password
   return password;
 }}
 // Write password to the #password input
