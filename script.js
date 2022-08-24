@@ -5,50 +5,50 @@ var generateBtn = document.querySelector("#generate");
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var symbols = ['"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~'];
 var lower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var upper = lower.toUpperCase();
 var possible = '';
 var password = '';
 var characters = 8
 
-function generatePassword () {
-
-var init = function() {
-  var input = prompt('How many characters?');
-  var choice;
-  if (input) {
-    choice = input[0];
-  } else {
-    alert('Please enter how many characters.');
-    init();
+function generatePassword() {
+  var init = function () {
+    var input = prompt('How many characters?');
+    var choice;
+    if (input) {
+      choice = input[0];
+    } else {
+      alert('Please enter how many characters.');
+      init();
+    }
   }
-}
-//Prompts
-var hasLower = confirm('Has lowercase letter?');
-var hasNumber = confirm('Has number?');
-var hasSpecial = confirm('Has special character?');
+  //Prompts
+  var hasLower = confirm('Has lowercase letter?');
+  var hasNumber = confirm('Has number?');
+  var hasSpecial = confirm('Has special character?');
 
-if (confirm) {
-  for (var i = 0; i <= characters; i++) {
-    var random = Math.floor(Math.random() * numbers.length, symbols.length, lower.length);
-  password += numbers, symbols, lower;
+  if (confirm) {
+    for (var i = 0; i <= characters; i++) {
+      var random = Math.floor(Math.random() * numbers.length, symbols.length, lower.length);
+      password += numbers, symbols, lower;
 
-  var possibleCharacters = [];
+      var possibleCharacters = [];
 
-  if (numbersprompt === true) { 
-    possibleCharacters = possibleCharacters.concat(numbers)
+      if (numbersprompt) {
+        possibleCharacters = possibleCharacters.concat(numbers)
+      }
+      if (symbolprompt) {
+        possibleCharacters = possibleCharacters.concat(symbols)
+      }
+      if (uppercaseprompt) {
+        possibleCharacters = possibleCharacters.concat(uppercase)
+      }
+      if (lowercaseprompt) {
+        possibleCharacters = possibleCharacters.concat(lowercase)
+      }
+    }
   }
-  if(symbolprompt === true) {
-     possibleCharacters = possibleCharacters.concat(symbols)
-   }
-  if(uppercaseprompt === true) {
-    possibleCharacters = possibleCharacters.concat(uppercase)
-  }
-  if(lowercaseprompt === true) {
-    possibleCharacters = possibleCharacters.concat(lowercase)
-  }
-}
-}
 
-return init;
+  return password;
 }
 // Write password to the #password input
 function writePassword() {
