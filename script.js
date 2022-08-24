@@ -16,9 +16,9 @@ function generatePassword() {
   //Prompts
   if (characters >= 8 && characters <= 128) {
     var hasLower = confirm('Has lowercase letter?');
-    var hasUpper = confirm('Has uppercase latter?');
-    var hasNumber = confirm('Has number?');
-    var hasSpecial = confirm('Has special character?');
+    var hasUpper = confirm('Has uppercase letter?');
+    var hasNumbers = confirm('Has number?');
+    var hasSymbols = confirm('Has special character?');
     //string of possible characters from prompt selection
     if (hasLower) {
       possible += lower;
@@ -26,10 +26,10 @@ function generatePassword() {
     if (hasUpper) {
       possible += lower;
     }
-    if (hasNumber) {
+    if (hasNumbers) {
       possible += lower;
     }
-    if (hasSpecial) {
+    if (hasSymbols) {
       possible += lower;
     }
   }
