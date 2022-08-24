@@ -43,6 +43,11 @@ function generatePassword() {
     }
   }
 
+for (var i = 0; i < characters; i++) {
+  var random = Math.floor(Math.random() * possible.length);
+  password += possible[random];
+}
+
   return password;
 }}
 // Write password to the #password input
