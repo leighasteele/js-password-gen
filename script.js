@@ -11,21 +11,16 @@ var password = '';
 var characters = 8
 
 function generatePassword() {
-  var init = function () {
-    var input = prompt('How many characters?');
-    var choice;
-    if (input) {
-      choice = input[0];
-    } else {
-      alert('Please enter how many characters.');
-      init();
-    }
-  }
+  
+  var characters = prompt('How many characters in your password? (8-128)');
+
   //Prompts
+  if (characters >= 8 && characters <= 128) {
   var hasLower = confirm('Has lowercase letter?');
+  var hasUpper = confirm('Has uppercase latter?');
   var hasNumber = confirm('Has number?');
   var hasSpecial = confirm('Has special character?');
-
+//string of possible characters from prompt selection
   if (confirm) {
     for (var i = 0; i <= characters; i++) {
       var random = Math.floor(Math.random() * numbers.length, symbols.length, lower.length);
@@ -49,7 +44,7 @@ function generatePassword() {
   }
 
   return password;
-}
+}}
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
