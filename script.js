@@ -24,13 +24,13 @@ function generatePassword() {
       possible += lower;
     }
     if (hasUpper) {
-      possible += lower;
+      possible += upper;
     }
     if (hasNumbers) {
-      possible += lower;
+      possible += numbers;
     }
     if (hasSymbols) {
-      possible += lower;
+      possible += symbols;
     }
   }
 
